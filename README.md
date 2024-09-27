@@ -16,9 +16,11 @@ Please read the S2C2 user guide:
 [S2C2 user guide](https://github.com/methodistsmab/S2C2/blob/main/S2C2-user-guide.pdf)
 
 
-# Sample data
+# Sample data format
 
-Since the input data is kind of large, you can send email to request the sample data.
+The input data format looks like the figure below. Your data should include the highlight data items.
+For the details explanation, you can check the user guide.
+![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/data_format.png)
 
 # Contact and Support
 
