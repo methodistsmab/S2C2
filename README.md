@@ -41,6 +41,6 @@ Since the input data is kind of large, you can send email to request the sample 
 >Email: xyu2@houstonmethodist.org
 
 
-# Houston Methodist Research Institute 
+# Department of System Medicine and Bioengineering 
 
 [DEPARTMENT OF SYSTEMS MEDICINE & BIOENGINEERING ](https://www.houstonmethodist.org/for-health-professionals/department-programs/systems-medicine-bioengineering-smab/)
