@@ -8,7 +8,7 @@ Parallel computing is supported by S2C2, allowing multiple calculations for sele
 # S2C2 software screenshot
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/overview.png)
 
-![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/celltype_direction.png)
+![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/highlight.png)
 
 
 # Sample data
