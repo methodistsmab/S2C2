@@ -13,7 +13,32 @@ Parallel computing is supported by S2C2, allowing multiple calculations for sele
 
 # Sample data
 
+Since the input data is kind of large, you can send email to request the sample data.
 
+# Contact and Support
+
+### Principal Investigator
+>Wong, Stephen 
+
+>Email: STWong@houstonmethodist.org
+>
+### Algorithms Support
+>Jianting Sheng
+
+>Email: jsheng@houstonmethodist.org
+
+>Ahn, Ju young 
+
+>Email: jahn@houstonmethodist.org
+
+### Software Support
+>Zhihao Wan
+
+>Email: zwan@houstonmethodist.org
+
+>Xiaohui Yu
+
+>Email: xyu2@houstonmethodist.org
 
 
 # Houston Methodist Research Institute 
