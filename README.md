@@ -5,5 +5,5 @@ S2C2 GUI is Java-based, ensuring cross-platform compatibility across Windows, ma
 Parallel computing is supported by S2C2, allowing multiple calculations for selected cell type pairs to be executed efficiently. A detailed tutorial, accessible through the provided GitHub link (available upon request), has been created with instructions for installing S2C2 on Windows, macOS, and Linux. System requirements have been outlined, recommending at least 8GB of RAM, with 16GB preferable for handling large-scale single-cell and ST data, as well as a multi-core processor with at least 2.5 GHz per core. For processing multiple cell-cell crosstalk pairs, four or more cores are advised to significantly enhance performance.
 
 
-# Screenshots
+# S2C2 software screenshot
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/overview.png)
