@@ -16,7 +16,11 @@ Please read the S2C2 user guide:
 [S2C2 user guide](https://github.com/methodistsmab/S2C2/blob/main/S2C2-user-guide.pdf)
 
 # How to use CLI version
-decompress the package **CLI_package_v1.zip**
+Decompress the package **CLI_package_v1.zip**
+
+```
+Rscript --max-ppsize=500000 sCCCExplorer_command.R log_report.dat /your_data_folder/input_ipf.rds cell_type_Jan2524 Diagnosis Control NA sender.txt receiver.txt 0.005 0.20 2 1000 0.0 mouse RNA output_folder
+```
 
 # Sample data format
 
