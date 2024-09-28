@@ -18,8 +18,32 @@ Please read the S2C2 user guide:
 # How to use CLI version
 Decompress the package **CLI_package_v1.zip**
 
+Command Usage:
+```
+Rscript --max-ppsize=500000 sCCCExplorer_command.R 
+         [Output log file]
+         [Input ipf file (.rds)]
+         [Cell type]
+         [Disease condition name]
+         [Phenotype 1]
+         [Phenotype 2]
+         [Cell type list of sender]
+         [Cell type list of receiver]
+         [Percent express]
+         [Logfc threshold]
+         [Intermediate downstream gene number]
+         [Permutation number]
+         [lambda]
+         [species - "mouse" or "human"]  
+         [assay - "RNA" or "integrated"] 
+         [output data folder]
+
+```
+
+Command Example:
 ```
 Rscript --max-ppsize=500000 sCCCExplorer_command.R log_report.dat /your_data_folder/input_ipf.rds cell_type_Jan2524 Diagnosis Control NA sender.txt receiver.txt 0.005 0.20 2 1000 0.0 mouse RNA output_folder
+
 ```
 
 # Sample data format
