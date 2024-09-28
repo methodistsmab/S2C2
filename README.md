@@ -10,11 +10,13 @@ Parallel computing is supported by S2C2, allowing multiple calculations for sele
 
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/highlight.png)
 
-# How to use S2C2 software
+# How to use S2C2 GUI software
 
 Please read the S2C2 user guide:
 [S2C2 user guide](https://github.com/methodistsmab/S2C2/blob/main/S2C2-user-guide.pdf)
 
+# How to use CLI version
+decompress the package **CLI_package_v1.zip**
 
 # Sample data format
 
