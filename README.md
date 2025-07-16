@@ -1,10 +1,4 @@
-# S2C2: Single-Cell Cross Communication Explorer
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![R](https://img.shields.io/badge/R-4.3.1+-blue.svg)](https://www.r-project.org/)
-[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
-[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange.svg)](https://ollama.ai/)
-
+# S2C2
 
 S2C2 software is a graphical tool for robust prediction of continuous intracellular signal transduction from single-cell or spatial transcriptomics data. 
 
@@ -12,18 +6,11 @@ S2C2 GUI is Java-based, ensuring cross-platform compatibility across Windows, ma
 
 Parallel computing is supported by S2C2, allowing multiple calculations for selected cell type pairs to be executed efficiently. A detailed tutorial, accessible through the provided GitHub link (available upon request), has been created with instructions for installing S2C2 on Windows, macOS, and Linux. System requirements have been outlined, recommending at least 8GB of RAM, with 16GB preferable for handling large-scale single-cell and ST data, as well as a multi-core processor with at least 2.5 GHz per core. For processing multiple cell-cell crosstalk pairs, four or more cores are advised to significantly enhance performance.
 
-  
+
 # S2C2 software screenshot
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/overview.png)
 
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/highlight.png)
-
-# Sample data format
-
-The input data format looks like the figure below. Your data should include the highlight data items.
-For the details explanation, you can check the user guide.
-![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/data_format.png)
-
 
 # How to use S2C2 GUI software
 Decompress the package **S2C2_v1.zip**
@@ -62,203 +49,11 @@ Rscript --max-ppsize=500000 sCCCExplorer_command.R log_report.dat /your_data_fol
 
 ```
 
-### System Requirements
+# Sample data format
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| RAM | 8GB | 16GB+ |
-| Storage | 10GB | 50GB+ |
-| CPU | 4 cores | 8+ cores |
-| GPU | Optional | NVIDIA GPU for faster LLM inference |
-
-
-## ⚡ Usage
-
-### 1. Load your RDS data
-```bash
-RScript loadRDS.R 
-```
-
-This creates:
-- `/temp/celltype.json` - Available cell types
-- `/temp/metadata.json` - Dataset metadata
-- `/temp/all_celltype.txt` - Cell type list
-
-Choose the `celltype` and `condition` from temp
-
-#### Create Cell Type Files
-```bash
-# Create sender.txt
-echo "Astrocyte" > sender.txt
-
-# Create receiver.txt  
-echo "Excitatory neuron" > receiver.txt
-```
-
-
-### 2. Install Dependencies
-```bash
-# Install R packages
-Rscript -e "install.packages(c('Seurat', 'SingleCellExperiment', 'openxlsx', 'presto', 'jsonlite', 'DescTools', 'plyr', 'dplyr', 'homologene', 'ggplot2', 'reshape2', 'stringr'))"
-
-# Install Python packages
-pip install -r requirements.txt
-
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
-```
-
-### 3. Start Ollama Service
-```bash
-ollama serve
-```
-
-
-### 4. Download Example Model
-```bash
-ollama pull llama3.2
-```
-More models => [ollama-model](https://ollama.com/search)
-
-### 5. Run Example Analysis
-```bash
-# Make pipeline executable
-chmod +x pipeline-test.sh
-
-# Run with example data
-./pipeline.sh \  
-  --log-file "./report.log" \
-  --rds-file "example.rds" \
-  --celltype-colname "Cell.Types" \
-  --condition-colname "condition" \
-  --condition1 "tumor" \
-  --condition2 "NA" \
-  --sender-file "./sender.txt" \
-  --receiver-file "./receiver.txt" \
-  --percent-exp 0.005 \
-  --logfc-threshold 0.20 \
-  --intermediate-downstream-gene-num 2 \
-  --permutation-num 1000 \
-  --lambda 0.0 \
-  --species "mouse" \
-  --assay "RNA" \
-  --disease "AD" \
-  --results-dir "results" \
-  --cell-type "astrocyte-excitatory neuron" \
-  --disease-context "AD" \
-  --model "llama3.2" \
-  --temperature 0.7 \
-  --max-tokens 1500 \
-  --context-size 131072 \
-  --seed 512
-```
-
-### Advanced Usage with Custom Parameters
-
-#### Required Parameters
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `--log-file` | Analysis log output | `"./report.log"` |
-| `--rds-file` | Path to Seurat RDS file | `"./data.rds"` |
-| `--celltype-colname` | Cell type column name | `"Cell.Types"` |
-| `--condition-colname` | Condition column name | `"condition"` |
-| `--condition1` | Primary condition | `"control"` |
-| `--condition2` | Secondary condition | `"treatment"` or `"NA"` |
-| `--sender-file` | Sender cell type file | `"./sender.txt"` |
-| `--receiver-file` | Receiver cell type file | `"./receiver.txt"` |
-| `--cell-type` | Communication description | `"microglia-neuron"` |
-
-#### S2C2 Analysis Parameters
-| Parameter | Default | Range | Description |
-|-----------|---------|-------|-------------|
-| `--percent-exp` | 0.005 | 0-1 | Expression percentage threshold |
-| `--logfc-threshold` | 0.20 | >0 | Log fold change threshold |
-| `--intermediate-downstream-gene-num` | 2 | ≥1 | Downstream gene count |
-| `--permutation-num` | 1000 | ≥1 | Permutation test iterations |
-| `--lambda` | 0.0 | 0-1 | Lambda parameter |
-| `--species` | "mouse" | mouse/human | Species type |
-| `--assay` | "RNA" | RNA/integrated | Assay type |
-| `--disease` | "AD" | Any | Disease context |
-| `--results-dir` | "results" | Any | Output directory |
-
-#### LLM Parameters
-| Parameter | Default | Range | Description |
-|-----------|---------|-------|-------------|
-| `--model` | "llama3.2" | See model list | Ollama model selection |
-| `--disease-context` | "Alzheimer's disease" | Any | Disease for LLM analysis |
-| `--temperature` | 0.7 | 0-2 | Model creativity |
-| `--max-tokens` | 1500 | ≥1 | Maximum generated tokens |
-| `--context-size` | 131072 | ≥1024 | Context window size |
-| `--seed` | 512 | ≥0 | Random seed for reproducibility |
-| `--output-file` | root workdirectory | - | The output directory for llm_report.txt|
-
-### Example LLM Output
-#### LR_pairs.txt (Ligand-Receptor Pairs)
-```txt
-Ligand	Receptor	Ligand_foldChange	Receptor_foldChange	Enrichment_score
-APOE	LDLR	2.15	1.87	0.89
-TGFB1	TGFBR1	1.92	2.34	0.76
-IL1B	IL1R1	3.45	1.23	0.67
-```
-
-#### significant_branches.txt (Pathway Analysis)
-```txt
-From	To	Type	Signaling_protein	Pathway_name	PAS_score	p_val
-APOE	LDLR	LR	Ligand	Cholesterol_metabolism	0.89	0.001
-LDLR	ABCA1	Signaling	Signaling	Lipid_transport	0.76	0.003
-ABCA1	PPARG	Signaling	Signaling	Transcription_regulation	0.67	0.005
-
-```
-
-#### llm_report.txt (AI-Generated Hypotheses)
-
-```txt
-================================================================================
-LLM HYPOTHESIS GENERATION REPORT
-================================================================================
-
-Generated at: 2024-01-15 14:30:25
-Cell communication type: astrocyte-neuron
-Disease context: Alzheimer's disease
-Model: llama3.2
-Processing time: 45.2 seconds
-
-================================================================================
-LLM RESPONSE:
-================================================================================
-
-Based on the cell-cell crosstalk analysis between astrocytes and excitatory neurons 
-in Alzheimer's disease, I have identified three biologically meaningful hypotheses:
-
-**Hypothesis 1: APOE-LDLR Cholesterol Transport Pathway**
-The APOE-LDLR interaction shows the highest PAS score (0.89) and is critical for 
-cholesterol homeostasis in the brain. This pathway may be dysregulated in AD, 
-leading to impaired lipid transport and neuronal dysfunction.
-
-**Hypothesis 2: TGFB1-TGFBR1 Neuroprotective Signaling**
-The TGFB1-TGFBR1 pair (PAS: 0.76) activates neuroprotective pathways that may 
-counteract amyloid-beta toxicity. This suggests a potential therapeutic target 
-for AD intervention.
-
-**Hypothesis 3: IL1B-IL1R1 Inflammatory Response**
-The IL1B-IL1R1 interaction (PAS: 0.67) indicates increased neuroinflammation, 
-which is a hallmark of AD progression and may contribute to synaptic loss.
-```
-
-
-## 📚 Citation
-
-If you use S2C2 in your research, please cite:
-
-```bibtex
-@article{s2c2_2024,
-  title={S2C2: Single-Cell Cross Communication Explorer with AI-Powered Hypothesis Generation},
-  author={TBD},
-  journal={TBD},
-  year={2024},
-  doi={TBD}
-}
-```
+The input data format looks like the figure below. Your data should include the highlight data items.
+For the details explanation, you can check the user guide.
+![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/data_format.png)
 
 # Contact and Support
 
