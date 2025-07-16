@@ -205,7 +205,10 @@ APOE	LDLR	LR	Ligand	Cholesterol_metabolism	0.89	0.001
 LDLR	ABCA1	Signaling	Signaling	Lipid_transport	0.76	0.003
 ABCA1	PPARG	Signaling	Signaling	Transcription_regulation	0.67	0.005
 
+```
+
 #### llm_report.txt (AI-Generated Hypotheses)
+
 ```txt
 ================================================================================
 LLM HYPOTHESIS GENERATION REPORT
