@@ -1,8 +1,11 @@
 # S2C2: Single-Cell Cross Communication Explorer
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![R](https://img.shields.io/badge/R-4.3.1+-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange.svg)](https://ollama.ai/)
+
+
 S2C2 software is a graphical tool for robust prediction of continuous intracellular signal transduction from single-cell or spatial transcriptomics data. 
 
 S2C2 GUI is Java-based, ensuring cross-platform compatibility across Windows, macOS, and Linux, with built-in visualization capabilities. The CLI version is designed for cloud server environments, while the R script provides a fast and efficient option tailored for bioinformaticians working with single-cell and spatial transcriptomics (ST) data in R. These options makes S2C2 a versatile solution for users on various operating systems.
