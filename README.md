@@ -190,6 +190,7 @@ chmod +x pipeline-test.sh
 | `--max-tokens` | 1500 | ≥1 | Maximum generated tokens |
 | `--context-size` | 131072 | ≥1024 | Context window size |
 | `--seed` | 512 | ≥0 | Random seed for reproducibility |
+| `--output-file` | root workdirectory | - | The output directory for llm_report.txt|
 
 ### Example LLM Output
 #### LR_pairs.txt (Ligand-Receptor Pairs)
