@@ -62,6 +62,15 @@ Rscript --max-ppsize=500000 sCCCExplorer_command.R log_report.dat /your_data_fol
 
 ```
 
+### System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| RAM | 8GB | 16GB+ |
+| Storage | 10GB | 50GB+ |
+| CPU | 4 cores | 8+ cores |
+| GPU | Optional | NVIDIA GPU for faster LLM inference |
+
 
 ## ⚡ Usage
 
@@ -180,16 +189,41 @@ chmod +x pipeline-test.sh
 | `--context-size` | 131072 | ≥1024 | Context window size |
 | `--seed` | 512 | ≥0 | Random seed for reproducibility |
 
+### Example LLM Output
 
-### System Requirements
+#### llm_report.txt (AI-Generated Hypotheses)
+```txt
+================================================================================
+LLM HYPOTHESIS GENERATION REPORT
+================================================================================
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| RAM | 8GB | 16GB+ |
-| Storage | 10GB | 50GB+ |
-| CPU | 4 cores | 8+ cores |
-| GPU | Optional | NVIDIA GPU for faster LLM inference |
+Generated at: 2024-01-15 14:30:25
+Cell communication type: astrocyte-neuron
+Disease context: Alzheimer's disease
+Model: llama3.2
+Processing time: 45.2 seconds
 
+================================================================================
+LLM RESPONSE:
+================================================================================
+
+Based on the cell-cell crosstalk analysis between astrocytes and excitatory neurons 
+in Alzheimer's disease, I have identified three biologically meaningful hypotheses:
+
+**Hypothesis 1: APOE-LDLR Cholesterol Transport Pathway**
+The APOE-LDLR interaction shows the highest PAS score (0.89) and is critical for 
+cholesterol homeostasis in the brain. This pathway may be dysregulated in AD, 
+leading to impaired lipid transport and neuronal dysfunction.
+
+**Hypothesis 2: TGFB1-TGFBR1 Neuroprotective Signaling**
+The TGFB1-TGFBR1 pair (PAS: 0.76) activates neuroprotective pathways that may 
+counteract amyloid-beta toxicity. This suggests a potential therapeutic target 
+for AD intervention.
+
+**Hypothesis 3: IL1B-IL1R1 Inflammatory Response**
+The IL1B-IL1R1 interaction (PAS: 0.67) indicates increased neuroinflammation, 
+which is a hallmark of AD progression and may contribute to synaptic loss.
+```
 
 
 ## 📚 Citation
