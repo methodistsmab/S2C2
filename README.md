@@ -190,6 +190,20 @@ chmod +x pipeline-test.sh
 | `--seed` | 512 | ≥0 | Random seed for reproducibility |
 
 ### Example LLM Output
+#### LR_pairs.txt (Ligand-Receptor Pairs)
+```txt
+Ligand	Receptor	Ligand_foldChange	Receptor_foldChange	Enrichment_score
+APOE	LDLR	2.15	1.87	0.89
+TGFB1	TGFBR1	1.92	2.34	0.76
+IL1B	IL1R1	3.45	1.23	0.67
+```
+
+#### significant_branches.txt (Pathway Analysis)
+```txt
+From	To	Type	Signaling_protein	Pathway_name	PAS_score	p_val
+APOE	LDLR	LR	Ligand	Cholesterol_metabolism	0.89	0.001
+LDLR	ABCA1	Signaling	Signaling	Lipid_transport	0.76	0.003
+ABCA1	PPARG	Signaling	Signaling	Transcription_regulation	0.67	0.005
 
 #### llm_report.txt (AI-Generated Hypotheses)
 ```txt
