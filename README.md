@@ -18,6 +18,13 @@ Parallel computing is supported by S2C2, allowing multiple calculations for sele
 
 ![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/highlight.png)
 
+# Sample data format
+
+The input data format looks like the figure below. Your data should include the highlight data items.
+For the details explanation, you can check the user guide.
+![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/data_format.png)
+
+
 # How to use S2C2 GUI software
 Decompress the package **S2C2_v1.zip**
 
@@ -198,12 +205,6 @@ If you use S2C2 in your research, please cite:
   doi={TBD}
 }
 ```
-
-# Sample data format
-
-The input data format looks like the figure below. Your data should include the highlight data items.
-For the details explanation, you can check the user guide.
-![Alt text](https://github.com/methodistsmab/S2C2/blob/main/screenshots/data_format.png)
 
 # Contact and Support
 
