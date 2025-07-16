@@ -112,12 +112,13 @@ curl -fsSL https://ollama.ai/install.sh | sh
 ```bash
 ollama serve
 ```
-More models => [ollama-model](https://ollama.com/search)
+
 
 ### 4. Download Example Model
 ```bash
 ollama pull llama3.2
 ```
+More models => [ollama-model](https://ollama.com/search)
 
 ### 5. Run Example Analysis
 ```bash
