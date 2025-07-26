@@ -1,0 +1,7 @@
+gene	gene_type	pathway
+CASP3	TF	Apoptosis
+CASP8	links	Apoptosis
+DFFA	TF	Apoptosis
+FADD	links	Apoptosis
+TNF	Ligand	MAPK_signaling_pathway;Osteoclast_differentiation;NF-kappa_B_signaling_pathway;Apoptosis;TNF_signaling_pathway
+TNFRSF1A	Receptor	MAPK_signaling_pathway;Osteoclast_differentiation;NF-kappa_B_signaling_pathway;Apoptosis

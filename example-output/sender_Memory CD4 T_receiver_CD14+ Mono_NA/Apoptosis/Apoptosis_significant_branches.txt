@@ -1,0 +1,12 @@
+From	To	Direction	Type	Pathway_name	Database_source	Conc	DB_edge_correlation	DB_edge_color	Branch	Branch_path	Signaling_protein	Global_sign	receiver_avg_log2FC	Edge_weight	p_val
+TNF	TNFRSF1A	directed	process(activation)	Apoptosis	KEGG	TNFTNFRSF1A	1	Red	Leaf_branch_1	TNF___TNFRSF1A___FADD___CASP8___CASP3___CASP6	Ligand	1	41.113067856744	0.045275302400301	0.011
+TNFRSF1A	FADD	directed	process(activation)	Apoptosis	KEGG	TNFRSF1AFADD	1	Red	Leaf_branch_1	TNF___TNFRSF1A___FADD___CASP8___CASP3___CASP6	Receptor	1	-1.86461660923815	0.0152946574680253	0.011
+FADD	CASP8	directed	process(activation)	Apoptosis	KEGG	FADDCASP8	1	Red	Leaf_branch_1	TNF___TNFRSF1A___FADD___CASP8___CASP3___CASP6	Signaling	1	-0.78904368071963	0.0067525084345418	0.011
+CASP8	CASP3	directed	process(activation)	Apoptosis	KEGG	CASP8CASP3	1	Red	Leaf_branch_1	TNF___TNFRSF1A___FADD___CASP8___CASP3___CASP6	Signaling	1	-0.789386985958433	0.0715557932089316	0.011
+CASP3	CASP6	directed	process(activation)	Apoptosis	KEGG	CASP3CASP6	1	Red	Leaf_branch_1	TNF___TNFRSF1A___FADD___CASP8___CASP3___CASP6	Leaf	1	-0.767011222980886	0.0255513300276381	0.011
+TNF	TNFRSF1A	directed	process(activation)	Apoptosis	KEGG	TNFTNFRSF1A	1	Red	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Ligand	1	41.113067856744	0.045275302400301	0.02
+TNFRSF1A	FADD	directed	process(activation)	Apoptosis	KEGG	TNFRSF1AFADD	1	Red	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Receptor	1	-1.86461660923815	0.0152946574680253	0.02
+FADD	CASP8	directed	process(activation)	Apoptosis	KEGG	FADDCASP8	1	Red	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Signaling	1	-0.78904368071963	0.0067525084345418	0.02
+CASP8	CASP3	directed	process(activation)	Apoptosis	KEGG	CASP8CASP3	1	Red	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Signaling	1	-0.789386985958433	0.0715557932089316	0.02
+CASP3	DFFA	directed	process(activation)	Apoptosis	KEGG	CASP3DFFA	1	Red	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Signaling	1	0.305231767848334	0.0166551859525931	0.02
+DFFA	DFFB	directed	process(dissociation)	Apoptosis	KEGG	DFFADFFB	-1	Blue	Leaf_branch_3	TNF___TNFRSF1A___FADD___CASP8___CASP3___DFFA___DFFB	Leaf	-1	0.236565621659209	-0.0171179373759446	0.02
